@@ -1,0 +1,33 @@
+{
+  "name": "besh-node",
+  "description": "Black Eye Shell (besh) for node",
+  "main": "besh-node.js",
+  "bin": "besh-node.js",
+  "scripts": {
+    "install-bin": "npm install -g $(npm pack . | tail -1)",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "keywords": [
+    "besh",
+    "framework"
+  ],
+  "author": "Black Eye Technology",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {
+    "js-yaml": "^3.12.0",
+    "lodash.merge": "^4.6.1",
+    "yargs-parser": "^8.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blackeyetech/besh-node.git"
+  },
+  "bugs": {
+    "url": "https://github.com/blackeyetech/besh-node/issues"
+  },
+  "homepage": "https://github.com/blackeyetech/besh-node#readme"
+}

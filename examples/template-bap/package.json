@@ -1,0 +1,10 @@
+{
+  "name": "template",
+  "description": "template BAP",
+  "main": "template-bap.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Black Eye Technology",
+  "license": "MIT"
+}
