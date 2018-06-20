@@ -221,9 +221,9 @@ global.besh = {
   async stopBaps() {
     // Check if we have started or maybe failed in startup but 
     // some Baps have been started
-    if (!started && bapsStarted.length === 0) {
-      throw new BeshError("besh has not been started!");
-    }
+    // if (!started && bapsStarted.length === 0) {
+    //   throw new BeshError("besh has not been started!");
+    // }
 
     // A silent startup implies a silent shutdown!
     if (silentStartup) {
