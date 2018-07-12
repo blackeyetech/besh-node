@@ -3,9 +3,29 @@
   "description": "Black Eye Shell (besh) for node",
   "main": "besh-node.js",
   "bin": "besh-node.js",
+  "lint-staged": {
+    "**/*.js": [
+      "prettier --write",
+      "eslint",
+      "git add"
+    ],
+    "**/*.{json,md,yaml}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "scripts": {
+    "check-staged": "lint-staged",
+    "lint": "eslint '**/*.js'",
+    "format": "prettier --write '**/*.{js,json,md,yaml}'",
     "install-bin": "npm install -g $(npm pack . | tail -1)",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "precommit": "lint-staged"
   },
   "engines": {
     "node": ">=8.0.0"
@@ -16,7 +36,15 @@
   ],
   "author": "Black Eye Technology",
   "license": "MIT",
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.13.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.0",
+    "prettier": "^1.13.7"
+  },
   "dependencies": {
     "js-yaml": "^3.12.0",
     "lodash.merge": "^4.6.1",

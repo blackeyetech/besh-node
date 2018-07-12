@@ -1,0 +1,17 @@
+---
+  globals:
+    besh: true
+
+  extends: 
+    - airbnb-base
+    - prettier
+  
+  rules:
+    strict:
+      - off
+    no-console:
+      - off
+    no-restricted-syntax:
+      - off
+    import/no-dynamic-require:
+      - off
