@@ -2,10 +2,18 @@
 
 const { Bap } = require("../bap.js");
 
+const DUP_CODE = 1;
+
 class DataStoreBapConnError extends Error {
   constructor(msg, code, conn) {
     super(msg);
+
+    this.code = code;
     conn.log.error(this);
+  }
+
+  static get DUP_CODE() {
+    return DUP_CODE;
   }
 }
 

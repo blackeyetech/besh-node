@@ -1,3 +1,9 @@
+# Version: 1.0.3
+
+## Date: 22-11-2018
+
+Added _code_ property to DataStoreBapConnError and introduced error codes
+
 # Version: 1.0.2
 
 ## Date: 12-07-2018
